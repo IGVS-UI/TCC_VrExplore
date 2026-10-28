@@ -31,8 +31,9 @@ a {
 
 
 
-/* Compatibilidade com a estrutura do index.html */
-header {
+/* A navbar global é o header direto do body. Não aplicar estas regras aos
+   headers semânticos dos painéis de conteúdo, como a sala de jogos. */
+body > header {
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +43,7 @@ header {
     backdrop-filter: blur(14px);
 }
 
-header nav-bar {
+body > header nav-bar {
     min-height: 80px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
